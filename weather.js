@@ -28,7 +28,7 @@ async function randomfunc() {
         console.log(data);
 
         City.textContent = city;
-        Temperature.textContent = data.currentConditions.temp;
+        Temperature.textContent = Math.round(( data.currentConditions.temp-32)*(5/9))   ;
         Humidity.textContent = data.currentConditions.humidity;
         // time.textContent = data.Time;
        Wind.textContent = data.currentConditions.windspeed;
